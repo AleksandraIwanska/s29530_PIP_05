@@ -6,6 +6,7 @@ public class Main {
 
         //Zadanie 1
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Wprowadź liczbę całkowitą");
         int n = scanner.nextInt();
         LiczbaN(n);
 
