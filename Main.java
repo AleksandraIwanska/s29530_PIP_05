@@ -1,0 +1,129 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Zadanie 1
+        /*Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        LiczbaN(n);*/
+
+
+        //Zadanie 2
+        System.out.println(zad2(4));
+
+
+        //Zadanie 3
+        /*int n=5;
+        gwiazdka(n);*/
+
+        // Zadanie 4
+        //zadanie4(7, 1, 11);
+
+    }
+
+
+    //metoda zadanie 1
+    public static void LiczbaN(int liczba) {
+        if (liczba < 0) {
+            for (int i = 0; i > liczba; i--) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = 0; i < liczba; i++) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Zadanie2 metoda
+    public static int zad2(int n) {
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            return zad2(n - 1) + zad2(n - 2);
+        }
+    }
+
+
+    // metoda zad 3
+    public static void gwiazdka(int liczba) {
+        if (liczba % 2 == 0) {
+            liczba -= 1;
+        }
+        System.out.println(liczba);
+        char znak = '*';
+        int x = 1;
+        for (int i = 0; i < liczba; i++) {
+            for (int j = 0; j < x; j++) {
+                System.out.print(znak);
+            }
+            System.out.println();
+            x++;
+
+        }
+    }
+
+    //metoda zadanie 4
+    public static void zadanie4(int x, int y, int z) {
+
+        int liczbaWierszy = 8;
+        if (x > y) {
+            liczbaWierszy = x;
+            if (x > z) {
+                liczbaWierszy = x;
+            } else if (x < z) {
+                liczbaWierszy = z;
+            } else if (x == z) {
+                liczbaWierszy = x;
+            }
+        } else if (x < y) {
+            liczbaWierszy = y;
+            if (y > z) {
+                liczbaWierszy = y;
+            } else if (y < z) {
+                liczbaWierszy = z;
+            } else if (y == z) {
+                liczbaWierszy = y;
+            }
+        } else if (x == y) {
+            liczbaWierszy = x;
+            if (x > z) {
+                liczbaWierszy = x;
+            } else if (x < z) {
+                liczbaWierszy = z;
+            } else if (x == z) {
+                liczbaWierszy = x;
+            }
+        }
+        System.out.println(liczbaWierszy);
+
+        int liczbaKolumn = 3;
+
+
+        for (int i = liczbaWierszy; i > 0; i--) {
+            for (int j = 0; j < liczbaKolumn; j++) {
+                if (j == 0 && i == x) {
+                    System.out.print("*");
+                    x--;
+                } else if (j == 1 && i == y) {
+                    System.out.print("*");
+                    y--;
+                } else if (j == 2 && i == z) {
+                    System.out.print("*");
+                    z--;
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
+}
+
+
