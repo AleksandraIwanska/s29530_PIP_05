@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
 
         //Zadanie 1
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        LiczbaN(n);*/
+        LiczbaN(n);
 
 
         //Zadanie 2
@@ -15,11 +15,11 @@ public class Main {
 
 
         //Zadanie 3
-        /*int n=5;
-        gwiazdka(n);*/
+        int n=5;
+        gwiazdka(n);
 
         // Zadanie 4
-        //zadanie4(7, 1, 11);
+        zadanie4(7, 1, 11);
 
     }
 
